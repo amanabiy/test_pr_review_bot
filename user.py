@@ -92,3 +92,18 @@ print(user.update_name("JohnSmith"))
 # Check user password
 print(user.check_password("Password123"))  # False
 print(user.check_passwor
+
+def update_user_info(user, new_email, new_password):
+    """Function to update user email and password if valid."""
+    
+    # Update email if it's valid
+    email_update_message = user.update_email(new_email)
+    print(email_update_message)
+    
+    # Update password if it's valid
+    password_update_message = user.update_password(new_password)
+    print(password_update_message)
+
+# Example Usage
+user = User("JohnDoe", "john@example.com", "Password123")
+update_user_info(user, "johnsmith@example.com", "NewPassword456")
